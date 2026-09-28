@@ -1,0 +1,4 @@
+#!/bin/bash
+# Accende il voice mode SOLO per la sessione Claude Code corrente. Uso: !voice-on
+[ -z "$CLAUDE_CODE_SESSION_ID" ] && { echo "voice-on: lancialo dentro una sessione Claude Code (!voice-on)"; exit 1; }
+mkdir -p ~/.claude/voice && touch ~/.claude/voice/$CLAUDE_CODE_SESSION_ID.on && echo "voice: on (solo questa sessione)"

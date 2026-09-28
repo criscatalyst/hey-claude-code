@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.DS_Store
+# produced by train-reflex.sh, never committed
+claude/voice-mode/laya/checkpoints/
+claude/voice-mode/laya/data/train.jsonl
+*.log

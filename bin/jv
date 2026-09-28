@@ -1,0 +1,14 @@
+#!/bin/bash
+# jv: Claude Code a voce, mani libere. Di' "hey jarvis" e parla; ti risponde con Luca.
+# Uso: jv [argomenti di claude]    Log dell'orecchio: ~/.claude/voice/voiced-<sessione>.log
+# Chiudere la finestra chiude tutto (destroy-unattached): claude, tmux e voiced.
+name="jv-$(date +%H%M%S)"
+mkdir -p ~/.claude/voice
+# voiced parte appena la sessione esiste, e ne esce da solo quando la sessione muore.
+( for _ in $(seq 50); do tmux has-session -t "$name" 2>/dev/null && break; sleep 0.1; done
+  exec ~/.claude/voice-mode/venv/bin/python ~/.claude/voice-mode/voiced.py "$name" \
+    > ~/.claude/voice/voiced-"$name".log 2>&1 ) &
+disown
+cmd="claude"; [ $# -gt 0 ] && cmd+=" $(printf '%q ' "$@")"
+exec tmux new-session -s "$name" -e JV_PANE="$name" -c "$PWD" "$cmd" \; \
+  set destroy-unattached on \; set mouse on \; set status-right " 🎙  hey jarvis "

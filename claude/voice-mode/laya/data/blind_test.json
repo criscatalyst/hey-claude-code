@@ -1,0 +1,1052 @@
+[
+ {
+  "utt": "Apri Chrome.",
+  "intent": "open_app",
+  "app": "chrome",
+  "site": "none",
+  "slot": ""
+ },
+ {
+  "utt": "aprimi spotifai",
+  "intent": "open_app",
+  "app": "spotify",
+  "site": "none",
+  "slot": ""
+ },
+ {
+  "utt": "ehm mi apri il terminale per favore",
+  "intent": "open_app",
+  "app": "terminal",
+  "site": "none",
+  "slot": ""
+ },
+ {
+  "utt": "Ok apri cap cut.",
+  "intent": "open_app",
+  "app": "capcut",
+  "site": "none",
+  "slot": ""
+ },
+ {
+  "utt": "vai su whats app",
+  "intent": "open_app",
+  "app": "whatsapp",
+  "site": "none",
+  "slot": ""
+ },
+ {
+  "utt": "apri obsidien",
+  "intent": "open_app",
+  "app": "obsidian",
+  "site": "none",
+  "slot": ""
+ },
+ {
+  "utt": "no aspetta, apri notion",
+  "intent": "open_app",
+  "app": "notion",
+  "site": "none",
+  "slot": ""
+ },
+ {
+  "utt": "lancia discord dai",
+  "intent": "open_app",
+  "app": "discord",
+  "site": "none",
+  "slot": ""
+ },
+ {
+  "utt": "Apri le impostazioni.",
+  "intent": "open_app",
+  "app": "settings",
+  "site": "none",
+  "slot": ""
+ },
+ {
+  "utt": "fammi vedere il calendario",
+  "intent": "open_app",
+  "app": "calendar",
+  "site": "none",
+  "slot": ""
+ },
+ {
+  "utt": "apri la posta",
+  "intent": "open_app",
+  "app": "mail",
+  "site": "none",
+  "slot": ""
+ },
+ {
+  "utt": "Allora, aprimi canva.",
+  "intent": "open_app",
+  "app": "canva",
+  "site": "none",
+  "slot": ""
+ },
+ {
+  "utt": "avvia obs che devo registrare",
+  "intent": "open_app",
+  "app": "obs",
+  "site": "none",
+  "slot": ""
+ },
+ {
+  "utt": "apri zoom",
+  "intent": "open_app",
+  "app": "zoom",
+  "site": "none",
+  "slot": ""
+ },
+ {
+  "utt": "Puoi aprire Excel?",
+  "intent": "open_app",
+  "app": "excel",
+  "site": "none",
+  "slot": ""
+ },
+ {
+  "utt": "mettimi su safari",
+  "intent": "open_app",
+  "app": "safari",
+  "site": "none",
+  "slot": ""
+ },
+ {
+  "utt": "aprimi il finder",
+  "intent": "open_app",
+  "app": "finder",
+  "site": "none",
+  "slot": ""
+ },
+ {
+  "utt": "apri l'app delle note",
+  "intent": "open_app",
+  "app": "notes",
+  "site": "none",
+  "slot": ""
+ },
+ {
+  "utt": "Passa a messaggi.",
+  "intent": "open_app",
+  "app": "messages",
+  "site": "none",
+  "slot": ""
+ },
+ {
+  "utt": "apri word che devo scrivere il contratto",
+  "intent": "open_app",
+  "app": "word",
+  "site": "none",
+  "slot": ""
+ },
+ {
+  "utt": "Apri lm studio.",
+  "intent": "open_app",
+  "app": "lmstudio",
+  "site": "none",
+  "slot": ""
+ },
+ {
+  "utt": "aprimi fathom per favore",
+  "intent": "open_app",
+  "app": "fathom",
+  "site": "none",
+  "slot": ""
+ },
+ {
+  "utt": "apri l'app di claude",
+  "intent": "open_app",
+  "app": "claude",
+  "site": "none",
+  "slot": ""
+ },
+ {
+  "utt": "mi apri i memo vocali",
+  "intent": "open_app",
+  "app": "voicememos",
+  "site": "none",
+  "slot": ""
+ },
+ {
+  "utt": "apri faceteim",
+  "intent": "open_app",
+  "app": "facetime",
+  "site": "none",
+  "slot": ""
+ },
+ {
+  "utt": "Apri la calcolatrice.",
+  "intent": "open_app",
+  "app": "calculator",
+  "site": "none",
+  "slot": ""
+ },
+ {
+  "utt": "apri figma",
+  "intent": "open_app",
+  "app": "none",
+  "site": "none",
+  "slot": ""
+ },
+ {
+  "utt": "Aprimi VS Code.",
+  "intent": "open_app",
+  "app": "none",
+  "site": "none",
+  "slot": ""
+ },
+ {
+  "utt": "lancia slack",
+  "intent": "open_app",
+  "app": "none",
+  "site": "none",
+  "slot": ""
+ },
+ {
+  "utt": "apri telegram per favore",
+  "intent": "open_app",
+  "app": "none",
+  "site": "none",
+  "slot": ""
+ },
+ {
+  "utt": "apri youtube",
+  "intent": "open_site",
+  "app": "none",
+  "site": "youtube",
+  "slot": ""
+ },
+ {
+  "utt": "Vai su gmail.",
+  "intent": "open_site",
+  "app": "none",
+  "site": "gmail",
+  "slot": ""
+ },
+ {
+  "utt": "vai su instagram che devo rispondere ai dm",
+  "intent": "open_site",
+  "app": "none",
+  "site": "instagram",
+  "slot": ""
+ },
+ {
+  "utt": "apri tiktok dai",
+  "intent": "open_site",
+  "app": "none",
+  "site": "tiktok",
+  "slot": ""
+ },
+ {
+  "utt": "Aprimi Twitter.",
+  "intent": "open_site",
+  "app": "none",
+  "site": "x",
+  "slot": ""
+ },
+ {
+  "utt": "aprimi github, il repo lo cerco io",
+  "intent": "open_site",
+  "app": "none",
+  "site": "github",
+  "slot": ""
+ },
+ {
+  "utt": "apri claude punto ai",
+  "intent": "open_site",
+  "app": "none",
+  "site": "claude_web",
+  "slot": ""
+ },
+ {
+  "utt": "Mi apri ChatGPT?",
+  "intent": "open_site",
+  "app": "none",
+  "site": "chatgpt",
+  "slot": ""
+ },
+ {
+  "utt": "vai sul drive",
+  "intent": "open_site",
+  "app": "none",
+  "site": "drive",
+  "slot": ""
+ },
+ {
+  "utt": "Apri la dashboard di Whop.",
+  "intent": "open_site",
+  "app": "none",
+  "site": "whop",
+  "slot": ""
+ },
+ {
+  "utt": "ehm apri vercel",
+  "intent": "open_site",
+  "app": "none",
+  "site": "vercel",
+  "slot": ""
+ },
+ {
+  "utt": "apri amazon",
+  "intent": "open_site",
+  "app": "none",
+  "site": "amazon",
+  "slot": ""
+ },
+ {
+  "utt": "apri booking punto com",
+  "intent": "open_site",
+  "app": "none",
+  "site": "other",
+  "slot": ""
+ },
+ {
+  "utt": "Vai su netflix.",
+  "intent": "open_site",
+  "app": "none",
+  "site": "other",
+  "slot": ""
+ },
+ {
+  "utt": "mi apri il sito di stripe",
+  "intent": "open_site",
+  "app": "none",
+  "site": "other",
+  "slot": ""
+ },
+ {
+  "utt": "cerca su google prezzo macbook air m4",
+  "intent": "web_search",
+  "app": "none",
+  "site": "none",
+  "slot": "prezzo macbook air m4"
+ },
+ {
+  "utt": "Cerca ricette carbonara vegana.",
+  "intent": "web_search",
+  "app": "none",
+  "site": "none",
+  "slot": "ricette carbonara vegana"
+ },
+ {
+  "utt": "cerca come si usa obsidian",
+  "intent": "web_search",
+  "app": "none",
+  "site": "none",
+  "slot": "come si usa obsidian"
+ },
+ {
+  "utt": "googla meteo napoli domani",
+  "intent": "web_search",
+  "app": "none",
+  "site": "none",
+  "slot": "meteo napoli domani"
+ },
+ {
+  "utt": "ehm cercami su google chi ha vinto la champions",
+  "intent": "web_search",
+  "app": "none",
+  "site": "none",
+  "slot": "chi ha vinto la champions"
+ },
+ {
+  "utt": "cerca come aprire la partita iva forfettaria",
+  "intent": "web_search",
+  "app": "none",
+  "site": "none",
+  "slot": "come aprire la partita iva forfettaria"
+ },
+ {
+  "utt": "fai una ricerca su remotion caption animate",
+  "intent": "web_search",
+  "app": "none",
+  "site": "none",
+  "slot": "remotion caption animate"
+ },
+ {
+  "utt": "Cerca spotify wrapped 2026.",
+  "intent": "web_search",
+  "app": "none",
+  "site": "none",
+  "slot": "spotify wrapped 2026"
+ },
+ {
+  "utt": "cerca su internet migliori microfoni lavalier",
+  "intent": "web_search",
+  "app": "none",
+  "site": "none",
+  "slot": "migliori microfoni lavalier"
+ },
+ {
+  "utt": "cercami orari farmacia di turno",
+  "intent": "web_search",
+  "app": "none",
+  "site": "none",
+  "slot": "orari farmacia di turno"
+ },
+ {
+  "utt": "Cerca capcut alternative per mac.",
+  "intent": "web_search",
+  "app": "none",
+  "site": "none",
+  "slot": "capcut alternative per mac"
+ },
+ {
+  "utt": "puoi cercare quanto costa claude max",
+  "intent": "web_search",
+  "app": "none",
+  "site": "none",
+  "slot": "quanto costa claude max"
+ },
+ {
+  "utt": "cerca youtube shorts monetizzazione italia",
+  "intent": "web_search",
+  "app": "none",
+  "site": "none",
+  "slot": "youtube shorts monetizzazione italia"
+ },
+ {
+  "utt": "dai cerca su google tutorial whisper large v3",
+  "intent": "web_search",
+  "app": "none",
+  "site": "none",
+  "slot": "tutorial whisper large v3"
+ },
+ {
+  "utt": "Cerca traduzione di serendipity.",
+  "intent": "web_search",
+  "app": "none",
+  "site": "none",
+  "slot": "traduzione di serendipity"
+ },
+ {
+  "utt": "cerca risultati napoli",
+  "intent": "web_search",
+  "app": "none",
+  "site": "none",
+  "slot": "risultati napoli"
+ },
+ {
+  "utt": "googlami next js app router cache",
+  "intent": "web_search",
+  "app": "none",
+  "site": "none",
+  "slot": "next js app router cache"
+ },
+ {
+  "utt": "cerca apri chrome da terminale mac",
+  "intent": "web_search",
+  "app": "none",
+  "site": "none",
+  "slot": "apri chrome da terminale mac"
+ },
+ {
+  "utt": "scrivi ci vediamo alle otto",
+  "intent": "type_text",
+  "app": "none",
+  "site": "none",
+  "slot": "ci vediamo alle otto"
+ },
+ {
+  "utt": "Digita ok perfetto grazie mille.",
+  "intent": "type_text",
+  "app": "none",
+  "site": "none",
+  "slot": "ok perfetto grazie mille"
+ },
+ {
+  "utt": "detta arrivo tra dieci minuti",
+  "intent": "type_text",
+  "app": "none",
+  "site": "none",
+  "slot": "arrivo tra dieci minuti"
+ },
+ {
+  "utt": "scrivi apri il link in bio",
+  "intent": "type_text",
+  "app": "none",
+  "site": "none",
+  "slot": "apri il link in bio"
+ },
+ {
+  "utt": "digita npm run dev",
+  "intent": "type_text",
+  "app": "none",
+  "site": "none",
+  "slot": "npm run dev"
+ },
+ {
+  "utt": "Scrivi: grazie per il messaggio, ti rispondo stasera.",
+  "intent": "type_text",
+  "app": "none",
+  "site": "none",
+  "slot": "grazie per il messaggio, ti rispondo stasera"
+ },
+ {
+  "utt": "scrivimi qui tutto confermato per giovedì",
+  "intent": "type_text",
+  "app": "none",
+  "site": "none",
+  "slot": "tutto confermato per giovedì"
+ },
+ {
+  "utt": "digita git push origin main",
+  "intent": "type_text",
+  "app": "none",
+  "site": "none",
+  "slot": "git push origin main"
+ },
+ {
+  "utt": "scrivi nel campo ciao Marco come stai",
+  "intent": "type_text",
+  "app": "none",
+  "site": "none",
+  "slot": "ciao Marco come stai"
+ },
+ {
+  "utt": "detta questo: la call è spostata a lunedì",
+  "intent": "type_text",
+  "app": "none",
+  "site": "none",
+  "slot": "la call è spostata a lunedì"
+ },
+ {
+  "utt": "Scrivi hashtag growth engineer.",
+  "intent": "type_text",
+  "app": "none",
+  "site": "none",
+  "slot": "hashtag growth engineer"
+ },
+ {
+  "utt": "scrivi cerca prima di chiedere",
+  "intent": "type_text",
+  "app": "none",
+  "site": "none",
+  "slot": "cerca prima di chiedere"
+ },
+ {
+  "utt": "apri una nuova scheda",
+  "intent": "new_tab",
+  "app": "none",
+  "site": "none",
+  "slot": ""
+ },
+ {
+  "utt": "Nuova tab.",
+  "intent": "new_tab",
+  "app": "none",
+  "site": "none",
+  "slot": ""
+ },
+ {
+  "utt": "mi apri un'altra scheda per favore",
+  "intent": "new_tab",
+  "app": "none",
+  "site": "none",
+  "slot": ""
+ },
+ {
+  "utt": "apri un nuovo tab su chrome",
+  "intent": "new_tab",
+  "app": "none",
+  "site": "none",
+  "slot": ""
+ },
+ {
+  "utt": "nuova scheda su safari dai",
+  "intent": "new_tab",
+  "app": "none",
+  "site": "none",
+  "slot": ""
+ },
+ {
+  "utt": "chiudi questa scheda",
+  "intent": "close_tab",
+  "app": "none",
+  "site": "none",
+  "slot": ""
+ },
+ {
+  "utt": "Chiudi la tab.",
+  "intent": "close_tab",
+  "app": "none",
+  "site": "none",
+  "slot": ""
+ },
+ {
+  "utt": "chiudimela sta finestra",
+  "intent": "close_tab",
+  "app": "none",
+  "site": "none",
+  "slot": ""
+ },
+ {
+  "utt": "ok chiudi la scheda di youtube",
+  "intent": "close_tab",
+  "app": "none",
+  "site": "none",
+  "slot": ""
+ },
+ {
+  "utt": "levami questa scheda dai",
+  "intent": "close_tab",
+  "app": "none",
+  "site": "none",
+  "slot": ""
+ },
+ {
+  "utt": "alza il volume",
+  "intent": "volume_up",
+  "app": "none",
+  "site": "none",
+  "slot": ""
+ },
+ {
+  "utt": "Più forte.",
+  "intent": "volume_up",
+  "app": "none",
+  "site": "none",
+  "slot": ""
+ },
+ {
+  "utt": "alzami un po' la musica",
+  "intent": "volume_up",
+  "app": "none",
+  "site": "none",
+  "slot": ""
+ },
+ {
+  "utt": "mettimi il volume più alto per favore",
+  "intent": "volume_up",
+  "app": "none",
+  "site": "none",
+  "slot": ""
+ },
+ {
+  "utt": "abbassa il volume",
+  "intent": "volume_down",
+  "app": "none",
+  "site": "none",
+  "slot": ""
+ },
+ {
+  "utt": "Abbassa un attimo.",
+  "intent": "volume_down",
+  "app": "none",
+  "site": "none",
+  "slot": ""
+ },
+ {
+  "utt": "più piano per favore",
+  "intent": "volume_down",
+  "app": "none",
+  "site": "none",
+  "slot": ""
+ },
+ {
+  "utt": "abbassami la musica che sono in call",
+  "intent": "volume_down",
+  "app": "none",
+  "site": "none",
+  "slot": ""
+ },
+ {
+  "utt": "togli l'audio",
+  "intent": "mute",
+  "app": "none",
+  "site": "none",
+  "slot": ""
+ },
+ {
+  "utt": "Muto.",
+  "intent": "mute",
+  "app": "none",
+  "site": "none",
+  "slot": ""
+ },
+ {
+  "utt": "silenzia tutto",
+  "intent": "mute",
+  "app": "none",
+  "site": "none",
+  "slot": ""
+ },
+ {
+  "utt": "rimetti l'audio dai",
+  "intent": "mute",
+  "app": "none",
+  "site": "none",
+  "slot": ""
+ },
+ {
+  "utt": "metti in pausa",
+  "intent": "play_pause",
+  "app": "none",
+  "site": "none",
+  "slot": ""
+ },
+ {
+  "utt": "Pausa.",
+  "intent": "play_pause",
+  "app": "none",
+  "site": "none",
+  "slot": ""
+ },
+ {
+  "utt": "riprendi il video",
+  "intent": "play_pause",
+  "app": "none",
+  "site": "none",
+  "slot": ""
+ },
+ {
+  "utt": "fai ripartire la musica",
+  "intent": "play_pause",
+  "app": "none",
+  "site": "none",
+  "slot": ""
+ },
+ {
+  "utt": "metti in pausa youtube",
+  "intent": "play_pause",
+  "app": "none",
+  "site": "none",
+  "slot": ""
+ },
+ {
+  "utt": "fai uno screenshot",
+  "intent": "screenshot",
+  "app": "none",
+  "site": "none",
+  "slot": ""
+ },
+ {
+  "utt": "Screenshot.",
+  "intent": "screenshot",
+  "app": "none",
+  "site": "none",
+  "slot": ""
+ },
+ {
+  "utt": "fammi uno screen dello schermo",
+  "intent": "screenshot",
+  "app": "none",
+  "site": "none",
+  "slot": ""
+ },
+ {
+  "utt": "cattura lo schermo per favore",
+  "intent": "screenshot",
+  "app": "none",
+  "site": "none",
+  "slot": ""
+ },
+ {
+  "utt": "scrivimi uno script per un reel su claude code",
+  "intent": "ask",
+  "app": "none",
+  "site": "none",
+  "slot": ""
+ },
+ {
+  "utt": "Controlla se ci sono mail dei brand a cui non ho risposto.",
+  "intent": "ask",
+  "app": "none",
+  "site": "none",
+  "slot": ""
+ },
+ {
+  "utt": "cosa ho in calendario domani",
+  "intent": "ask",
+  "app": "none",
+  "site": "none",
+  "slot": ""
+ },
+ {
+  "utt": "ehm come si apre il terminale sul mac",
+  "intent": "ask",
+  "app": "none",
+  "site": "none",
+  "slot": ""
+ },
+ {
+  "utt": "scrivimi una mail a Marco per spostare la call a giovedì",
+  "intent": "ask",
+  "app": "none",
+  "site": "none",
+  "slot": ""
+ },
+ {
+  "utt": "Analizzami il repo della video factory e dimmi cosa non va.",
+  "intent": "ask",
+  "app": "none",
+  "site": "none",
+  "slot": ""
+ },
+ {
+  "utt": "c'è un bug nella dashboard, il grafico delle views non carica, sistemalo",
+  "intent": "ask",
+  "app": "none",
+  "site": "none",
+  "slot": ""
+ },
+ {
+  "utt": "scrivi una caption per il carosello di oggi",
+  "intent": "ask",
+  "app": "none",
+  "site": "none",
+  "slot": ""
+ },
+ {
+  "utt": "quanti follower ho fatto questa settimana",
+  "intent": "ask",
+  "app": "none",
+  "site": "none",
+  "slot": ""
+ },
+ {
+  "utt": "come faccio a esportare in 4k su capcut",
+  "intent": "ask",
+  "app": "none",
+  "site": "none",
+  "slot": ""
+ },
+ {
+  "utt": "Mi fai un riassunto delle news AI di oggi?",
+  "intent": "ask",
+  "app": "none",
+  "site": "none",
+  "slot": ""
+ },
+ {
+  "utt": "dammi tre hook per un video su whisper",
+  "intent": "ask",
+  "app": "none",
+  "site": "none",
+  "slot": ""
+ },
+ {
+  "utt": "rispondi al brand di ieri che accetto a 800 euro",
+  "intent": "ask",
+  "app": "none",
+  "site": "none",
+  "slot": ""
+ },
+ {
+  "utt": "quanto ho venduto di velocity lab questo mese",
+  "intent": "ask",
+  "app": "none",
+  "site": "none",
+  "slot": ""
+ },
+ {
+  "utt": "come si fa uno screenshot solo di una parte dello schermo",
+  "intent": "ask",
+  "app": "none",
+  "site": "none",
+  "slot": ""
+ },
+ {
+  "utt": "perché spotify non parte più",
+  "intent": "ask",
+  "app": "none",
+  "site": "none",
+  "slot": ""
+ },
+ {
+  "utt": "Scrivi un thread per X sul mio setup con due Mac.",
+  "intent": "ask",
+  "app": "none",
+  "site": "none",
+  "slot": ""
+ },
+ {
+  "utt": "controlla i log del bot telegram e dimmi perché è crashato",
+  "intent": "ask",
+  "app": "none",
+  "site": "none",
+  "slot": ""
+ },
+ {
+  "utt": "trovami la clip dove parlo di prezzi",
+  "intent": "ask",
+  "app": "none",
+  "site": "none",
+  "slot": ""
+ },
+ {
+  "utt": "allora prepara la distribuzione dei video di questa settimana",
+  "intent": "ask",
+  "app": "none",
+  "site": "none",
+  "slot": ""
+ },
+ {
+  "utt": "come si apre obsidian da terminale",
+  "intent": "ask",
+  "app": "none",
+  "site": "none",
+  "slot": ""
+ },
+ {
+  "utt": "fammi un carosello sui 5 tool che uso ogni giorno",
+  "intent": "ask",
+  "app": "none",
+  "site": "none",
+  "slot": ""
+ },
+ {
+  "utt": "ricordami cosa devo fare oggi",
+  "intent": "ask",
+  "app": "none",
+  "site": "none",
+  "slot": ""
+ },
+ {
+  "utt": "Aggiungi in calendario una call con Luca venerdì alle tre.",
+  "intent": "ask",
+  "app": "none",
+  "site": "none",
+  "slot": ""
+ },
+ {
+  "utt": "traducimi in inglese la caption dell'ultimo reel",
+  "intent": "ask",
+  "app": "none",
+  "site": "none",
+  "slot": ""
+ },
+ {
+  "utt": "ehm",
+  "intent": "none",
+  "app": "none",
+  "site": "none",
+  "slot": ""
+ },
+ {
+  "utt": "Grazie.",
+  "intent": "none",
+  "app": "none",
+  "site": "none",
+  "slot": ""
+ },
+ {
+  "utt": "no aspetta niente",
+  "intent": "none",
+  "app": "none",
+  "site": "none",
+  "slot": ""
+ },
+ {
+  "utt": "non aprire chrome",
+  "intent": "none",
+  "app": "none",
+  "site": "none",
+  "slot": ""
+ },
+ {
+  "utt": "no lascia stare spotify",
+  "intent": "none",
+  "app": "none",
+  "site": "none",
+  "slot": ""
+ },
+ {
+  "utt": "apri il",
+  "intent": "none",
+  "app": "none",
+  "site": "none",
+  "slot": ""
+ },
+ {
+  "utt": "Mamma arrivo tra cinque minuti.",
+  "intent": "none",
+  "app": "none",
+  "site": "none",
+  "slot": ""
+ },
+ {
+  "utt": "sì sì dopo lo faccio",
+  "intent": "none",
+  "app": "none",
+  "site": "none",
+  "slot": ""
+ },
+ {
+  "utt": "Luca chiudi la porta per favore",
+  "intent": "none",
+  "app": "none",
+  "site": "none",
+  "slot": ""
+ },
+ {
+  "utt": "non serve che cerchi niente",
+  "intent": "none",
+  "app": "none",
+  "site": "none",
+  "slot": ""
+ },
+ {
+  "utt": "lascia perdere dai",
+  "intent": "none",
+  "app": "none",
+  "site": "none",
+  "slot": ""
+ },
+ {
+  "utt": "Aspetta che ci penso.",
+  "intent": "none",
+  "app": "none",
+  "site": "none",
+  "slot": ""
+ },
+ {
+  "utt": "cerca di",
+  "intent": "none",
+  "app": "none",
+  "site": "none",
+  "slot": ""
+ },
+ {
+  "utt": "no non alzare il volume",
+  "intent": "none",
+  "app": "none",
+  "site": "none",
+  "slot": ""
+ },
+ {
+  "utt": "come si cambia lo sfondo nelle impostazioni",
+  "intent": "ask",
+  "app": "none",
+  "site": "none",
+  "slot": ""
+ },
+ {
+  "utt": "scrivi un messaggio carino per il compleanno di mia sorella",
+  "intent": "ask",
+  "app": "none",
+  "site": "none",
+  "slot": ""
+ },
+ {
+  "utt": "cerca linkedin carousel best practices",
+  "intent": "web_search",
+  "app": "none",
+  "site": "none",
+  "slot": "linkedin carousel best practices"
+ },
+ {
+  "utt": "apri reddit che voglio vedere cosa dicono di claude",
+  "intent": "open_site",
+  "app": "none",
+  "site": "reddit",
+  "slot": ""
+ },
+ {
+  "utt": "no youtube no, dopo",
+  "intent": "none",
+  "app": "none",
+  "site": "none",
+  "slot": ""
+ }
+]

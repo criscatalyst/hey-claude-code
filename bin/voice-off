@@ -1,0 +1,6 @@
+#!/bin/bash
+# Spegne il voice mode della sessione Claude Code corrente e zittisce la voce. Uso: !voice-off
+[ -z "$CLAUDE_CODE_SESSION_ID" ] && { echo "voice-off: lancialo dentro una sessione Claude Code (!voice-off)"; exit 1; }
+rm -f ~/.claude/voice/$CLAUDE_CODE_SESSION_ID.on ~/.claude/voice/$CLAUDE_CODE_SESSION_ID.state
+python3 ~/.claude/hooks/voice_speak.py stop
+echo "voice: off"
