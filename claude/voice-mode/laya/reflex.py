@@ -28,6 +28,7 @@ LOG = VOICE_DIR / "reflex.jsonl"
 HEAD, MAXLEN = 512, 1024
 GATE = 0.8                    # intent and target confidence needed to act without Claude
 MAX_ACTIONS = 4               # per sentence
+MAX_WORDS = 18                # longer than this is a task, not a command: Claude, without asking Laya
 COOLDOWN_S = 4.0              # the same launch is not repeated within this window
 TERMINALS = {"Terminal", "iTerm2", "cmux", "Ghostty", "Warp", "WezTerm", "Alacritty", "kitty"}
 
@@ -50,12 +51,23 @@ TAIL = {
 }
 COMPOSE = re.compile(r"^" + LEAD + r"scriv(?:imi\b|i\s+(?:a|ad|al|alla|allo|agli|alle)\s|i\s+(?:una?|due|tre|qualche|delle|dei|degli)\s+"
                      r"(?:righe|mail|email|messaggi|post|caption|script|paragraf|testo|riassunt|articol|thread|tweet|fras|bozza))", re.I)
+PLATFORM = re.compile(r"\b(?:cerc\w*|trova\w*|ricerca)\s+(?:\w+\s+)?(?:su|in|dentro|nel|nella|sul)\s+(?:instagram|insta|ig|youtube|"
+                      r"tiktok|tik tok|linkedin|reddit|amazon|twitter|x|threads|facebook|github|gmail|whatsapp|spotify|"
+                      r"netflix|notion|whop|telegram|discord|pinterest)\b", re.I)
 FILLER = {"di", "a", "da", "in", "su", "per", "con", "il", "lo", "la", "i", "gli", "le", "un", "una", "e", "che", "come", "ehm"}
 DOMAIN = re.compile(r"\b([a-z0-9][a-z0-9-]{1,40})\s+punto\s+(com|it|ai|io|org|net|dev|app|co|eu|so)\b", re.I)
 
 
+SENTENCE = re.compile(r"(?<=[.?!])\s+")
+
+
 def clauses(text):
-    return [c.strip(" ,;.") for c in SPLIT.split(str(text or "")) if c.strip(" ,;.")]
+    """Every sentence is its own piece, then each is cut before a command verb. Cutting only at
+    verbs let "cerca su Instagram X. Parla di Y. Puoi fare ricerca?" become one Google search."""
+    out = []
+    for sentence in SENTENCE.split(str(text or "")):
+        out += [c.strip(" ,;.?!") for c in SPLIT.split(sentence) if c.strip(" ,;.?!")]
+    return out
 
 
 def slot_text(intent, clause, ws, ans):
@@ -157,6 +169,8 @@ def decide(clause, ws, ans):
         return None                            # "scrivimi due righe su...", "scrivi a Lonnie...": write it, Claude
     if it in ("web_search", "type_text"):
         t = slot_text(it, clause, ws, ans)
+        if it == "web_search" and PLATFORM.search(clause):
+            return None                        # "cerca su Instagram l'ultimo post di…"
         # "cerca di..." cut off mid-sentence: nothing real to search or type.
         return {"intent": it, "text": t} if set(t.lower().split()) - FILLER else None
     return {"intent": it}
@@ -240,6 +254,9 @@ def handle(text):
     t0 = time.time()
     rec = {"t": time.strftime("%Y-%m-%d %H:%M:%S"), "text": text, "clauses": []}
     try:
+        if len(str(text).split()) > MAX_WORDS:
+            rec["result"] = "claude-long"
+            return text
         parts = clauses(text)
         plan = []
         for cl in parts:

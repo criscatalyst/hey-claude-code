@@ -68,6 +68,7 @@ For the Italian voice, download "Luca (Enhanced)" in System Settings › Accessi
 | "apri Spotify", "cerca meteo Napoli", "alza il volume" | reflex: done in ~150 ms, no Claude |
 | "scrivimi uno script per un reel su…" | goes to Claude, you hear its progress out loud |
 | "stop" / "basta" | silences the voice |
+| click **■ zitto** in the tmux status bar, or tap right ⌘ | silences it while it's talking ("hey jarvis" is ignored while it speaks, so it never hears itself) |
 | "interrompi" | Esc: stops Claude |
 | "sì" / "no" while Claude waits for a permission | Enter / Esc |
 

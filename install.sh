@@ -18,7 +18,7 @@ fi
 say_step "Copying files"
 mkdir -p "$C/hooks" "$VM/laya/data" "$C/voice" "$HOME/.local/bin"
 cp "$R"/claude/hooks/*.py "$C/hooks/"
-cp "$R"/claude/voice-mode/voiced.py "$R"/claude/voice-mode/beep.wav "$VM/"
+cp "$R"/claude/voice-mode/voiced.py "$R"/claude/voice-mode/beep.wav "$R"/claude/voice-mode/jv.tmux.conf "$VM/"
 cp "$R"/claude/voice-mode/laya/*.py "$R"/claude/voice-mode/laya/train-reflex.sh "$VM/laya/"
 cp "$R"/claude/voice-mode/laya/data/blind_test.json "$VM/laya/data/"
 cp "$R"/bin/* "$HOME/.local/bin/"

@@ -9,6 +9,11 @@ mkdir -p ~/.claude/voice
   exec ~/.claude/voice-mode/venv/bin/python ~/.claude/voice-mode/voiced.py "$name" \
     > ~/.claude/voice/voiced-"$name".log 2>&1 ) &
 disown
-cmd="claude"; [ $# -gt 0 ] && cmd+=" $(printf '%q ' "$@")"
+# Tools pre-approved in jv sessions only ("allowed_tools" in ~/.claude/voice-mode/settings.json,
+# e.g. ["mcp__computer-use"]). Normal Claude Code sessions keep asking as usual.
+allowed=$(python3 -c 'import json,os;p=os.path.expanduser("~/.claude/voice-mode/settings.json");print(" ".join(json.load(open(p)).get("allowed_tools",[])) if os.path.exists(p) else "")' 2>/dev/null)
+cmd="claude"; [ -n "$allowed" ] && cmd+=" --allowedTools $(printf '%q ' $allowed)"
+[ $# -gt 0 ] && cmd+=" $(printf '%q ' "$@")"
 exec tmux new-session -s "$name" -e JV_PANE="$name" -c "$PWD" "$cmd" \; \
-  set destroy-unattached on \; set mouse on \; set status-right " 🎙  hey jarvis "
+  set destroy-unattached on \; set mouse on \; set status-right " 🎙  hey jarvis " \; \
+  source-file ~/.claude/voice-mode/jv.tmux.conf

@@ -18,6 +18,7 @@ import sys
 import threading
 import time
 import wave
+from collections import deque
 from pathlib import Path
 
 import mlx_whisper
@@ -42,10 +43,11 @@ VOICE_DIR = voice_speak.VOICE_DIR
 WHISPER = "mlx-community/whisper-large-v3-turbo-q4"
 LANG = voice_speak.settings()["language"]   # whisper language code, from settings.json
 SR, CHUNK = 16000, 1280          # 80 ms, il passo di openWakeWord
-WAKE_THRESHOLD = 0.4                # la pronuncia italiana arriva ~0.5, l'inglese ~0.99
+WAKE_THRESHOLD = 0.3                # pronuncia italiana 0.3-0.5 (log 2026-10-15: sopra 0.3 sempre chiamate vere)
 BEEP = Path(__file__).parent / "beep.wav"   # 80 ms: i suoni di sistema durano >0.5s e coprono la frase
+ECHO_TAIL_S = 1.0                 # wake spenta mentre parlo e 1 s dopo: il microfono sentiva Luca e trascriveva lui
 SKIP_S = 0.15                     # audio buttato dopo il wake: coda del nome + beep
-SILENCE_END_S, START_TIMEOUT_S, MAX_S = 1.5, 5.0, 30.0
+SILENCE_END_S, START_TIMEOUT_S, MAX_S = 2.0, 5.0, 30.0   # 2 s: le pause per pensare non chiudono la frase
 RECORDINGS = VOICE_DIR / "recordings"   # ogni frase salvata, per confrontare modelli e impostazioni
 # Contesto per whisper: indovina meglio le parole se sa di cosa si parla.
 PROMPT = ("Comandi a voce a un assistente: apri, cerca, scrivi, chiudi, alza, abbassa. Claude, Jarvis, Laya, "
@@ -82,7 +84,7 @@ def rms(chunk):
 
 def record(stream, floor):
     """Registra finché non smetti di parlare, senza nome e beep in testa. None se non dici niente."""
-    threshold = max(floor * 2.5, 250.0)
+    threshold = max(floor * 3.0, 200.0)  # la voce bassa sta a 300-800: sopra 250 di soglia la tagliava
     frames, started, silent, t0 = [], False, 0.0, time.time()
     while time.time() - t0 < MAX_S:
         chunk, _ = stream.read(CHUNK)
@@ -238,7 +240,8 @@ def main():
     threading.Thread(target=speak_watch, daemon=True).start()
     tapped = threading.Event()
     threading.Thread(target=cmd_tap_watch, args=(tapped,), daemon=True).start()
-    floor = 200.0
+    floor, noise = 60.0, deque(maxlen=60)  # ultimi ~5 s di livelli
+    last_talk = 0.0
     log("pronto, in ascolto su", PANE)
     with sd.InputStream(samplerate=SR, channels=1, dtype="int16", blocksize=CHUNK) as stream:
         last_check = 0.0
@@ -250,14 +253,21 @@ def main():
                 last_check = time.time()
             chunk, _ = stream.read(CHUNK)
             chunk = chunk[:, 0]
-            if not voice_speak.speaking():
-                floor = 0.95 * floor + 0.05 * rms(chunk)  # rumore di fondo, solo quando lui tace
+            if voice_speak.speaking():
+                last_talk = time.time()
+            else:
+                noise.append(rms(chunk))  # rumore di fondo, solo quando lui tace
+                floor = float(np.percentile(noise, 20))  # i momenti più quieti: la media includeva la tua voce e saliva a ~400
             score = wake.predict(chunk)["hey_jarvis"]
             tap = tapped.is_set()
             tapped.clear()
             if 0.2 < score < WAKE_THRESHOLD and not tap:
                 log(f"quasi wake ({score:.2f})")  # per tarare la soglia sulla voce vera
             if (score < WAKE_THRESHOLD and not tap) or not voice_on():
+                continue
+            if not tap and time.time() - last_talk < ECHO_TAIL_S:
+                log(f"wake ignorata, stavo parlando io ({score:.2f})")
+                wake.reset()
                 continue
             log("⌘ destro" if tap else f"wake ({score:.2f})")
             voice_speak.stop_all()  # barge-in
